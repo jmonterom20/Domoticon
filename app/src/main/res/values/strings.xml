@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Domoticon</string>
+    <string name="app_name">DOMOTICON</string>
+    <string name="number_devices">Number of devices</string>
 </resources>

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
         android:layout_marginEnd="60dp"
-        android:text="DOMÓTICON"
+        android:text="@string/app_name"
         android:textColor="@color/yellow"
         android:textSize="50dp"
         android:textStyle="bold"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logoIcon"
         android:layout_width="341dp"
         android:layout_height="453dp"
         android:layout_marginTop="8dp"
@@ -32,10 +32,23 @@
         app:srcCompat="@drawable/baseline_lightbulb_outline_24" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textDevices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Number of devices"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="732dp" />
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="104dp"
+        android:text="@string/number_devices"
+        android:textColor="@color/yellow"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoIcon" />
+
+    <Spinner
+        android:id="@+id/spinnerSelector"
+        android:layout_width="113dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoIcon" />
 </androidx.constraintlayout.widget.ConstraintLayout>
