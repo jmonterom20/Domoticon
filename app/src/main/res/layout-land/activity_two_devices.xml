@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -8,80 +9,81 @@
         android:id="@+id/textControlPanel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginTop="16dp"
         android:text="Control Panel"
-        android:textSize="35dp"
         android:textAlignment="center"
+        android:textSize="35dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageBombilla1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="88dp"
+        android:layout_width="105dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textControlPanel"
         app:srcCompat="@drawable/apagado" />
-
-    <ImageView
-        android:id="@+id/imageBombilla2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textControlPanel"
-        app:srcCompat="@drawable/apagado" />
-
-    <ToggleButton
-        android:id="@+id/buttonBombilla1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="52dp"
-        android:text="ToggleButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageBombilla1" />
-
-    <ToggleButton
-        android:id="@+id/buttonBombilla2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="52dp"
-        android:text="ToggleButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageBombilla2" />
-
-    <CheckBox
-        android:id="@+id/checkBombilla1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonBombilla1" />
-
-    <CheckBox
-        android:id="@+id/checkBombilla2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="72dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonBombilla2" />
 
     <ImageButton
         android:id="@+id/changeBombillas"
         android:layout_width="58dp"
         android:layout_height="57dp"
-        android:layout_marginTop="556dp"
-        android:layout_marginEnd="176dp"
+        android:layout_marginTop="228dp"
         android:background="@color/yellow"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textControlPanel"
         app:srcCompat="@android:drawable/stat_notify_sync_noanim" />
+
+    <ToggleButton
+        android:id="@+id/buttonBombilla1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="8dp"
+        android:text="ToggleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBombilla1" />
+
+    <CheckBox
+        android:id="@+id/checkBombilla2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="264dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBombilla2" />
+
+    <ToggleButton
+        android:id="@+id/buttonBombilla2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="240dp"
+        android:text="ToggleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBombilla2" />
+
+    <ImageView
+        android:id="@+id/imageBombilla2"
+        android:layout_width="105dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="232dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textControlPanel"
+        app:srcCompat="@drawable/apagado" />
+
+    <CheckBox
+        android:id="@+id/checkBombilla1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBombilla1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

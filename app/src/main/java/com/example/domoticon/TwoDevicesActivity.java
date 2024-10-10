@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.domoticon.databinding.ActivityMainBinding;
@@ -16,11 +17,18 @@ public class TwoDevicesActivity extends AppCompatActivity {
     private boolean isBombilla1Encendida = false;
     private boolean isBombilla2Encendida = false;
 
+    public static final String ESTADO_BOMBILLA_1 = "Bombilla 1 apagada";
+    public static final String ESTADO_BOMBILLA_2 = "Bombilla 2 apagada";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_two_devices);
+
+        if (savedInstanceState != null) {
+            isBombilla1Encendida = savedInstanceState.getBoolean(ESTADO_BOMBILLA_1);
+            isBombilla2Encendida = savedInstanceState.getBoolean(ESTADO_BOMBILLA_2);
+        }
 
         binding = ActivityTwoDevicesBinding .inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -73,5 +81,12 @@ public class TwoDevicesActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putBoolean(ESTADO_BOMBILLA_1, isBombilla1Encendida);
+        savedInstanceState.putBoolean(ESTADO_BOMBILLA_2, isBombilla2Encendida);
+        super.onSaveInstanceState(savedInstanceState);
     }
 }

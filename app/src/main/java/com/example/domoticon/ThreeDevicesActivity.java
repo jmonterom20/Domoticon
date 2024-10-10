@@ -15,11 +15,20 @@ public class ThreeDevicesActivity extends AppCompatActivity {
     private boolean isBombilla2Encendida = false;
     private boolean isBombilla3Encendida = false;
 
+    public static final String ESTADO_BOMBILLA_1 = "Bombilla 1 apagada";
+    public static final String ESTADO_BOMBILLA_2 = "Bombilla 2 apagada";
+    public static final String ESTADO_BOMBILLA_3 = "Bombilla 3 apagada";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_three_devices);
 
-        setContentView(R.layout.activity_two_devices);
+        if (savedInstanceState != null) {
+            isBombilla1Encendida = savedInstanceState.getBoolean(ESTADO_BOMBILLA_1);
+            isBombilla2Encendida = savedInstanceState.getBoolean(ESTADO_BOMBILLA_2);
+            isBombilla3Encendida = savedInstanceState.getBoolean(ESTADO_BOMBILLA_3);
+        }
 
         binding = ActivityThreeDevicesBinding .inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -93,5 +102,13 @@ public class ThreeDevicesActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putBoolean(ESTADO_BOMBILLA_1, isBombilla1Encendida);
+        savedInstanceState.putBoolean(ESTADO_BOMBILLA_2, isBombilla2Encendida);
+        savedInstanceState.putBoolean(ESTADO_BOMBILLA_3, isBombilla3Encendida);
+        super.onSaveInstanceState(savedInstanceState);
     }
 }
