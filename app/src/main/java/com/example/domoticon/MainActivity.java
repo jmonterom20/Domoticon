@@ -38,13 +38,15 @@ public class MainActivity extends AppCompatActivity {
                     if (selectedNumber.equals("2")) {
                         Intent intent = new Intent(MainActivity.this, TwoDevicesActivity.class);
                         startActivity(intent);
+                    } else if (selectedNumber.equals("3")) {
+                        Intent intent = new Intent(MainActivity.this, ThreeDevicesActivity.class);
+                        startActivity(intent);
                     }
                 }
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-                // Acción cuando no se selecciona nada
                 mensaje("Sin selección");
             }
         });
